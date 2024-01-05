@@ -1,9 +1,23 @@
 var express=require('express');
 var app=express();
 app.use(express.static('public'))
-app.get("/",(req, res)=>{res.send("Welcome to our website");});
-app.get("/product",(req, res)=>{var p={ "id":45, "title":"Gerbera","description":"Wedding Flower", "unitprice":14, "quatity":7000 };
-                                       res.send(p);
-});
+const staticfolder=express.static(path.join(__dirname,"public"));
+app.use(staticfolder);
+app.get("/",(req,res)=>{
+  res.sendFile(path.join(__dirname,"index.html"))
+
+})
+app.get("/",(req,res)=>{
+    res.sendFile(path.join(__dirname,"aboutus.html"))
+  
+  })
+  app.get("/",(req,res)=>{
+    res.sendFile(path.join(__dirname,"contact.html"))
+  
+  })
+  app.get("/",(req,res)=>{
+    res.sendFile(path.join(__dirname,"services.html"))
+  
+  })
 app.listen(8000);
 console.log("App is listening on port 8000");
