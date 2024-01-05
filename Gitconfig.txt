@@ -1,0 +1,15 @@
+git config --global --unset http.proxy
+
+git config --global --unset https.proxy
+
+git config --global --unset core.gitproxy
+
+git config --global http.proxy http://exam@192.168.10.4:808
+
+git config --global credential.helper wincred
+
+git config --global user.name "Aniket0195"
+
+git config --global user.email "aniketgaikwad0195@gmail.com"
+
+git config --global user.password "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"
