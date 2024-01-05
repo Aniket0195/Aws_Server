@@ -12,4 +12,4 @@ git config --global user.name "Aniket0195"
 
 git config --global user.email "aniketgaikwad0195@gmail.com"
 
-git config --global user.password "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"
+git config --global user.password "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"
